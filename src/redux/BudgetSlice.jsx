@@ -35,4 +35,6 @@ const BudgetSlice = createSlice({
     }
 })
 
+
+export const {addbudget, adddepense} = BudgetSlice.actions
 export default BudgetSlice.reducer
