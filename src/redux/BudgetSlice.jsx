@@ -4,7 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const BudgetSlice = createSlice({
     name:'budget',
     initialState:{
-        budget:2500,
+        budget:25000,
         lastid:3,
         depenses: [
             {
@@ -24,7 +24,15 @@ const BudgetSlice = createSlice({
             },
         ]
     },
-    reducers: {}
+    reducers: {
+        addbudget:(state, action) => {
+            state.budget += parseFloat(action.payload);
+        },
+        adddepense:(state, action) => {
+            state.lastid++;
+            state.depenses = [...state.depenses, {...action.payload, id:state.lastid}]
+        },
+    }
 })
 
 export default BudgetSlice.reducer
