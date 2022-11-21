@@ -2,8 +2,13 @@ import React from 'react';
 
 const ListDepenses = () => {
     return (
-        <div>
-            
+        <div className='list'>
+            <table>
+                <tr>
+                    <th>Description</th>
+                    <th>Montant</th>
+                </tr>
+            </table>
         </div>
     );
 }
